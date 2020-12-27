@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 20;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.panel-question {
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.panel-heading {
+    font-weight: bold;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.panel-body {
+    padding: 15px;
+    /* background-color: white; */
+}
+
+/* p {
+    background: white;
+} */
+
+
+#btn-collapse {
+    float: right;
+    margin-right: .3em;
+    padding: 8px;
+    color: white;
+    border: none;
+    background-color: gray;
+    cursor: pointer;
+}
