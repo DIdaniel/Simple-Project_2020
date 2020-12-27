@@ -1,0 +1,121 @@
+@keyframes scroll {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100px 100px;
+    }
+
+    100% {
+        background-position: -200px 200px;
+    }
+}
+
+body, ul, h2{
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* CSS 시작 */
+
+body {
+    background-color: #222;
+    color: white;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 50px auto;
+}
+
+.monster {
+    /* background-color: #931f40; */
+    transform: skewY(3deg);
+}
+
+.monster-item {
+    float: left;
+    width: 33.33333333%;
+    height: 700px;
+    position: relative;
+    line-height: 700px;
+    transition: all .5s;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+    animation-timing-function: linear;
+    animation-play-state: paused;
+}
+
+.monster-item h2 {
+    padding: 0 0.5em;
+    font-size: 0;
+    transition: all .5s;
+    opacity: 0;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.monster:hover .monster-item {
+    width: 20%;
+}
+
+.monster .monster-item:hover {
+    width: 60%;   
+    animation-play-state: running;
+}
+
+.monster .monster-item:hover h2 {
+    font-size: 4.5rem;
+    opacity: 1;
+}
+
+
+.monster-item-cover {
+    position: absolute;;
+    left: 50%;
+    top: 50%;
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(1,-0.54, 0.43, 1.78);
+    transform: translate(-50%, -50%) rotate(0) scale(.6);
+}
+
+
+.monster-item.bear {
+    background-color: #67aa18;
+    text-align: right;
+    background-image: url(./images/back-1.png);    
+}
+
+.monster-item.corn {
+    background-color: #fa7200;
+    text-align: center;
+    background-image: url(./images/back-1.png);
+}
+.monster-item.puppy {
+    background-color: #931f40;
+    text-align: left;
+    background-image: url(./images/back-1.png);
+}
+
+.monster-item.bear:hover .monster-item-cover {
+    transform: translate(-90%, -50%) rotate(-15deg) scale(1);
+}
+
+.monster-item.corn:hover .monster-item-cover {
+    transform: translate(-70%, -40%) rotate(5deg) scale(1);
+}
+
+.monster-item.puppy:hover .monster-item-cover {
+    transform: translate(-15%, -50%) rotate(20deg) scale(1);
+}
